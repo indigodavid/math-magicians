@@ -1,15 +1,15 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Math Magicians
 
-> Description the project.
+> This project contains a Calculator App using React. The project is structured as a Single Page Application using React Virtual DOM manipulation..
 
 
 ## Built With
 
+- JavaScript
 - React
-- Frameworks
-- Technologies used
+- CSS
 
 ## Live Demo (if available)
 
@@ -18,25 +18,26 @@
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- Modern Web Browser
+- NPM updated
+- Git
+
 ### Setup
 
+    git clone https://github.com/indigodavid/math-magicians.git
+    cd math-magicians/
 ### Install
+
+    npm install
 
 ### Usage
 
-### Run tests
-
-### Deployment
-
-
+    npm run build
+    npm start
 
 ## Authors
 
@@ -58,9 +59,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- Microverse
 - Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- My supportive family 😊
 
 ## 📝 License
 

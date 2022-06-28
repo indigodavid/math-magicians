@@ -18,6 +18,8 @@ ul {
   display: flex;
   flex-direction: column;
   width: 30em;
+  padding: 2px;
+  background-color: #ccc;
 }
 
 #calculator-buttons {

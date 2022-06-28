@@ -23,7 +23,7 @@ ul {
 #calculator-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
+  gap: 2px;
   text-align: center;
 }
 
@@ -49,4 +49,5 @@ ul {
   background-color: #555;
   color: #fff;
   padding: 1rem 0.5rem;
+  margin-bottom: 2px;
 }

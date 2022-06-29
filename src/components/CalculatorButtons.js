@@ -1,32 +1,47 @@
-import { PureComponent } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
+import calculate from '../logic/calculate';
 
-class CalculatorButtons extends PureComponent {
+class CalculatorButtons extends Component {
   constructor(props) {
     super(props);
     this.buttons = props.buttons;
+    this.state = {
+      obj: {
+        total: null,
+        next: null,
+        operation: null,
+      },
+    };
   }
 
-  // state = {  }
+  handleClick(text) {
+    this.setState((state) => ({
+      obj: calculate(state.obj, text),
+    }));
+    const { obj } = this.state;
+    console.log(obj);
+  }
+
   render() {
     const { buttons } = this.props;
     const innerList = [];
     buttons.forEach((text, index) => {
       const id = `button-${index}`;
-      let li;
+      let button;
       if (text === '0') {
-        li = <li key={id} className="calculator-button button-zero">{text}</li>;
+        button = <button type="button" key={id} className="calculator-button button-zero" onClick={() => this.handleClick(text)}>{text}</button>;
       } else if (text === '÷' || text === 'x' || text === '-' || text === '+' || text === '=') {
-        li = <li key={id} className="calculator-button orange">{text}</li>;
+        button = <button type="button" key={id} className="calculator-button orange" onClick={() => this.handleClick(text)}>{text}</button>;
       } else {
-        li = <li key={id} className="calculator-button">{text}</li>;
+        button = <button type="button" key={id} className="calculator-button" onClick={() => this.handleClick(text)}>{text}</button>;
       }
-      innerList.push(li);
+      innerList.push(button);
     });
     return (
-      <ul id="calculator-buttons">
+      <div id="calculator-buttons">
         {innerList}
-      </ul>
+      </div>
     );
   }
 }

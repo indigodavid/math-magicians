@@ -48,6 +48,9 @@ ul {
   background-color: #ddd;
   color: #000;
   padding: 1rem;
+  appearance: none;
+  border: none;
+  font-size: 1rem;
 }
 
 .calculator-button.orange {

@@ -10,7 +10,7 @@ class CalculatorDisplay extends Component {
     const { display } = this.state;
     return (
       <div className="display">
-        <span>{display}</span>
+        <input id="input-display" name="input-display" defaultValue={display} type="text" />
       </div>
     );
   }

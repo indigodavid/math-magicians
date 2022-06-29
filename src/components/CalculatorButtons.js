@@ -16,7 +16,7 @@ class CalculatorButtons extends PureComponent {
       let li;
       if (text === '0') {
         li = <li key={id} className="calculator-button button-zero">{text}</li>;
-      } else if (text === '÷' || text === '×' || text === '-' || text === '+' || text === '=') {
+      } else if (text === '÷' || text === 'x' || text === '-' || text === '+' || text === '=') {
         li = <li key={id} className="calculator-button orange">{text}</li>;
       } else {
         li = <li key={id} className="calculator-button">{text}</li>;
@@ -35,7 +35,7 @@ CalculatorButtons.propTypes = { buttons: PropTypes.arrayOf(PropTypes.string) };
 CalculatorButtons.defaultProps = {
   buttons: [
     'AC', '+/-', '%', '÷',
-    '7', '8', '9', '×',
+    '7', '8', '9', 'x',
     '4', '5', '6', '-',
     '1', '2', '3', '+',
     '0', ',', '=',

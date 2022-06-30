@@ -15,10 +15,9 @@ class CalculatorDisplay extends Component {
   constructor(props) {
     super(props);
     this.onDisplay = props.onDisplay;
-    // this.state = { display: '0' };
   }
 
-  handleKeyUp(e) {
+  handleKeyPress(e) {
     const { onKeyEvent } = this.props;
     switch (e.key) {
       case '0':
@@ -66,7 +65,7 @@ class CalculatorDisplay extends Component {
     const newValue = CalculatorDisplay.validateObject(onDisplay());
     return (
       <div className="display">
-        <input id="input-display" name="input-display" value={newValue} type="text" onKeyPress={(e) => this.handleKeyUp(e)} onChange={(e) => this.handleChangeDisplay(e)} />
+        <input id="input-display" name="input-display" value={newValue} type="text" onKeyPress={(e) => this.handleKeyPress(e)} onChange={(e) => this.handleChangeDisplay(e)} />
       </div>
     );
   }

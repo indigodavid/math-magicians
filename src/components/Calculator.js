@@ -1,32 +1,32 @@
-import { Component } from 'react';
+import { useState } from 'react';
 import CalculatorButtons from './CalculatorButtons';
 import CalculatorDisplay from './CalculatorDisplay';
 import calculate from '../logic/calculate';
 
-const initialObj = {
+/* const initialObj = {
   total: null,
   next: null,
   operation: null,
-}
+} */
 
-const Calculator = ({obj: initialObj}) => {
-  const [obj, setObj] = useState(initialObj);
+const Calculator = () => {
+  const [obj, setObj] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
   const handleChange = (input) => {
-    setObj({
-      obj: calculate(obj, input),
-    });
+    setObj(calculate(obj, input));
     return obj;
   };
-  const getDisplayInfo = () => {
-    return obj;
-  }
+  const getDisplayInfo = () => obj;
   return (
     <div id="calculator">
       <CalculatorDisplay onDisplay={getDisplayInfo} onKeyEvent={handleChange} />
       <CalculatorButtons onClickButtons={handleChange} />
     </div>
   );
-}
+};
 
 /* class Calculator extends Component {
   constructor(props) {

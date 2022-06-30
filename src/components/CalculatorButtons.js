@@ -1,26 +1,15 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
-import calculate from '../logic/calculate';
 
 class CalculatorButtons extends Component {
   constructor(props) {
     super(props);
     this.buttons = props.buttons;
-    this.state = {
-      obj: {
-        total: null,
-        next: null,
-        operation: null,
-      },
-    };
   }
 
   handleClick(text) {
-    this.setState((state) => ({
-      obj: calculate(state.obj, text),
-    }));
-    const { obj } = this.state;
-    console.log(obj);
+    const { onClickButtons } = this.props;
+    onClickButtons(text);
   }
 
   render() {
@@ -46,14 +35,18 @@ class CalculatorButtons extends Component {
   }
 }
 
-CalculatorButtons.propTypes = { buttons: PropTypes.arrayOf(PropTypes.string) };
+CalculatorButtons.propTypes = {
+  buttons: PropTypes.arrayOf(PropTypes.string),
+  onClickButtons: PropTypes.func.isRequired,
+};
+
 CalculatorButtons.defaultProps = {
   buttons: [
     'AC', '+/-', '%', '÷',
     '7', '8', '9', 'x',
     '4', '5', '6', '-',
     '1', '2', '3', '+',
-    '0', ',', '=',
+    '0', '.', '=',
   ],
 };
 

@@ -3,7 +3,24 @@ import CalculatorButtons from './CalculatorButtons';
 import CalculatorDisplay from './CalculatorDisplay';
 import calculate from '../logic/calculate';
 
-class Calculator extends Component {
+const initialObj = {
+  total: null,
+  next: null,
+  operation: null,
+}
+
+const Calculator = ({obj: initialObj}) => {
+  const [obj, setObj] = useState(initialObj);
+  const handleChange = (input) => {
+    setObj({
+      obj: calculate(obj, input),
+    });
+    return obj;
+  };
+  
+}
+
+/* class Calculator extends Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
@@ -38,6 +55,6 @@ class Calculator extends Component {
       </div>
     );
   }
-}
+} */
 
 export default Calculator;

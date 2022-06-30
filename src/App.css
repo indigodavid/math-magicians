@@ -29,10 +29,29 @@ ul {
   text-align: center;
 }
 
+#input-display {
+  appearance: none;
+  font-size: 1rem;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  text-align: right;
+  width: 100%;
+}
+
+#input-display:focus {
+  border: none;
+  outline: none;
+}
+
 .calculator-button {
   background-color: #ddd;
   color: #000;
   padding: 1rem;
+  appearance: none;
+  border: none;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .calculator-button.orange {

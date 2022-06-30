@@ -20,6 +20,12 @@ const Calculator = ({obj: initialObj}) => {
   const getDisplayInfo = () => {
     return obj;
   }
+  return (
+    <div id="calculator">
+      <CalculatorDisplay onDisplay={getDisplayInfo} onKeyEvent={handleChange} />
+      <CalculatorButtons onClickButtons={handleChange} />
+    </div>
+  );
 }
 
 /* class Calculator extends Component {

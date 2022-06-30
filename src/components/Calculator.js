@@ -17,7 +17,9 @@ const Calculator = ({obj: initialObj}) => {
     });
     return obj;
   };
-  
+  const getDisplayInfo = () => {
+    return obj;
+  }
 }
 
 /* class Calculator extends Component {

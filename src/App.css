@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cantarell:ital@1&display=swap');
+
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-primary: #555;
+  --color-negative: #fff;
+  --color-accent: #2e3e6c;
+  --font-head: 'Architects Daughter', cursive;
+  --font-quote: 'Cantarell', sans-serif;
 }
 
 body {
@@ -14,18 +26,34 @@ ul {
   margin: 0;
 }
 
+a,
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+blockquote {
+  font-size: 2.5rem;
+  font-family: var(--font-quote);
+  font-style: italic;
+  margin-bottom: 1em;
+}
+
 #calculator {
   display: flex;
   flex-direction: column;
   width: 30em;
-  padding: 2px;
+  padding: 0.125em;
   background-color: #ccc;
+  max-width: 100%;
 }
 
 #calculator-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
+  gap: 0.125em;
   text-align: center;
 }
 
@@ -44,6 +72,18 @@ ul {
   outline: none;
 }
 
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60em;
+  max-width: 100%;
+  gap: 2em;
+  padding: 3%;
+  margin: 0 auto;
+}
+
 .calculator-button {
   background-color: #ddd;
   color: #000;
@@ -52,6 +92,14 @@ ul {
   border: none;
   font-size: 1rem;
   margin: 0;
+}
+
+.calculator-button:hover {
+  opacity: 0.7;
+}
+
+.calculator-button:active {
+  opacity: 0.4;
 }
 
 .calculator-button.button-orange {
@@ -70,5 +118,85 @@ ul {
   background-color: #555;
   color: #fff;
   padding: 1rem 0.5rem;
-  margin-bottom: 2px;
+  margin-bottom: 0.125em;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color-accent);
+  color: var(--color-negative);
+}
+
+.logo {
+  font-size: 2rem;
+  font-family: var(--font-head);
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+}
+
+.navLinks li {
+  border-right: 0.125em solid var(--color-negative);
+  padding: 0.5rem 1rem;
+}
+
+.navLinks li:last-child {
+  border-right: none;
+}
+
+a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.quote {
+  width: 50em;
+  max-width: 100%;
+  padding: 3%;
+  margin: 0 auto;
+}
+
+.quote div {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  width: 60em;
+  max-width: 100%;
+  padding: 3%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.noMatch {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.noMatch svg {
+  width: 10em;
+  height: auto;
+}
+
+@media screen and (min-width: 48em) {
+  #wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 }

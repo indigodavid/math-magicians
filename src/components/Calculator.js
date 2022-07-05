@@ -18,9 +18,12 @@ const Calculator = () => {
   const getDisplayInfo = () => obj;
 
   return (
-    <div id="calculator">
-      <CalculatorDisplay onDisplay={getDisplayInfo} onKeyEvent={handleChange} />
-      <CalculatorButtons onClickButtons={handleChange} />
+    <div id="wrapper">
+      <h2>Let&apos;s do some math!</h2>
+      <div id="calculator">
+        <CalculatorDisplay onDisplay={getDisplayInfo} onKeyEvent={handleChange} />
+        <CalculatorButtons onClickButtons={handleChange} />
+      </div>
     </div>
   );
 };

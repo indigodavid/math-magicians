@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cantarell:ital@1&display=swap');
+
 *,
 *::after,
 *::before {
@@ -177,6 +178,20 @@ a.active {
   margin: 0 auto;
   font-size: 1.2rem;
   line-height: 1.2;
+}
+
+.noMatch {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.noMatch svg {
+  width: 10em;
+  height: auto;
 }
 
 @media screen and (min-width: 48em) {

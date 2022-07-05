@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Cantarell:ital@1&display=swap');
 *,
 *::after,
 *::before {
@@ -13,6 +12,7 @@
   --color-negative: #fff;
   --color-accent: #2e3e6c;
   --font-head: 'Architects Daughter', cursive;
+  --font-quote: 'Cantarell', sans-serif;
 }
 
 body {
@@ -31,6 +31,13 @@ a:focus,
 a:visited {
   text-decoration: none;
   color: inherit;
+}
+
+blockquote {
+  font-size: 2.5rem;
+  font-family: var(--font-quote);
+  font-style: italic;
+  margin-bottom: 1em;
 }
 
 #calculator {
@@ -67,10 +74,12 @@ a:visited {
 #wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 60em;
   max-width: 100%;
   gap: 2em;
-  padding: 2%;
+  padding: 3%;
   margin: 0 auto;
 }
 
@@ -144,8 +153,35 @@ a.active {
   font-weight: bold;
 }
 
+.quote {
+  width: 50em;
+  max-width: 100%;
+  padding: 3%;
+  margin: 0 auto;
+}
+
+.quote div {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  width: 60em;
+  max-width: 100%;
+  padding: 3%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
 @media screen and (min-width: 48em) {
   #wrapper {
     flex-direction: row;
+    align-items: flex-start;
   }
 }

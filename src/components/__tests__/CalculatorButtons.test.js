@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CalculatorButtons from '../CalculatorButtons';
 import calculate from '../../logic/calculate';
@@ -9,10 +9,10 @@ describe('Tests for CalculatorButtons module', () => {
     total: null,
     next: null,
     operation: null,
-  }
+  };
 
   const handleChange = (input) => {
-    obj = calculate(obj, input)
+    obj = calculate(obj, input);
     return obj;
   };
 
@@ -21,10 +21,10 @@ describe('Tests for CalculatorButtons module', () => {
     const buttonList = await screen.findAllByRole('button');
     expect(buttonList).toHaveLength(19);
   });
-  
+
   test('Check if the calculator has delete button', () => {
     render(<CalculatorButtons onClickButtons={handleChange} />);
     const linkElement = screen.getByText(/AC/i);
     expect(linkElement).toBeInTheDocument();
   });
-})
+});

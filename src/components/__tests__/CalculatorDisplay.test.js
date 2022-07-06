@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CalculatorDisplay from '../CalculatorDisplay';
 import calculate from '../../logic/calculate';
@@ -9,10 +9,10 @@ describe('Tests for CalculatorDisplay module', () => {
     total: null,
     next: null,
     operation: null,
-  }
+  };
 
   const handleChange = (input) => {
-    obj = calculate(obj, input)
+    obj = calculate(obj, input);
     return obj;
   };
 
@@ -23,11 +23,16 @@ describe('Tests for CalculatorDisplay module', () => {
     const inputText = screen.findByRole('input');
     expect(inputText).toBeTruthy();
   });
-  
+
   test('Check if the display updates its value', () => {
     handleChange('1');
-    const { container } = render(<CalculatorDisplay onKeyEvent={handleChange} onDisplay={getDisplayInfo} />);
+    const { container } = render(
+      <CalculatorDisplay
+        onKeyEvent={handleChange}
+        onDisplay={getDisplayInfo}
+      />,
+    );
     const inputText = container.querySelector('#input-display');
     expect(inputText.value).toBe('1');
   });
-})
+});

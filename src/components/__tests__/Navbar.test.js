@@ -1,23 +1,21 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { NavLink } from 'react-router-dom';
 import '@testing-library/jest-dom';
-import Navbar from '../Navbar';
-import App from '../../App'
+import App from '../../App';
 
 describe('Tests for Navbar', () => {
   test('Logo is displayed', () => {
     const { container } = render(<App />);
     const logo = container.querySelector('.logo');
     expect(logo).toBeInTheDocument();
-  })
+  });
 
   test('Navbar links browsing', async () => {
-    const { container } = render(<App />)
+    const { container } = render(<App />);
 
-    expect(screen.getByText(/Welcome/i)).toBeInTheDocument()
+    expect(screen.getByText(/Welcome/i)).toBeInTheDocument();
 
-    fireEvent.click(screen.getByText(/Quote/i))
-    expect(container.querySelector('.quote')).toBeInTheDocument()
-  })
-})
+    fireEvent.click(screen.getByText(/Quote/i));
+    expect(container.querySelector('.quote')).toBeInTheDocument();
+  });
+});

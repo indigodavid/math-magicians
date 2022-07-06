@@ -7,4 +7,4 @@ test('Home renders correctly', () => {
   const title = 'Welcome to Math Magicians';
   render(<Home />);
   expect(screen.getByText(title)).toBeInTheDocument();
-})
+});

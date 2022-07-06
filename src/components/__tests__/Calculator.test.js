@@ -4,11 +4,11 @@ import '@testing-library/jest-dom';
 import Calculator from '../Calculator';
 
 describe('Tests for Calculator Module', () => {
-  const title = "Let's do some math!"
-  render(<Calculator />)
+  const title = "Let's do some math!";
+  render(<Calculator />);
   test('The calculator component is displayed', () => {
     expect(screen.getByText(title)).toBeInTheDocument();
-  })
+  });
 
   test('Display updates when buttons are pressed', () => {
     const { container } = render(<Calculator />);
@@ -19,7 +19,7 @@ describe('Tests for Calculator Module', () => {
     expect(display.value).toBe('1');
     fireEvent.click(button0);
     expect(display.value).toBe('10');
-  })
+  });
 
   test('Test number of buttons', async () => {
     render(<Calculator />);
@@ -31,4 +31,4 @@ describe('Tests for Calculator Module', () => {
     const linkElement = screen.getByText(/AC/i);
     expect(linkElement).toBeInTheDocument();
   });
-})
+});

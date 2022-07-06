@@ -1,12 +1,12 @@
-import calculate from "../calculate";
+import calculate from '../calculate';
 
 let initialObj = {
   total: null,
   next: null,
   operation: null,
-}
+};
 
-let buttonName = '1';
+const buttonName = '1';
 
 describe('Test Objects received by calculate', () => {
   test('Next becomes 1 after sending 1', () => {
@@ -39,4 +39,4 @@ describe('Test Objects received by calculate', () => {
     expect(initialObj.next).toBe('2');
     expect(initialObj.operation).toBe('+');
   });
-})
+});

@@ -26,5 +26,9 @@ describe('Tests for Calculator Module', () => {
     const buttonList = await screen.findAllByRole('button');
     expect(buttonList).toHaveLength(19);
   });
-
+  test('Check if the calculator has delete button', () => {
+    render(<Calculator />);
+    const linkElement = screen.getByText(/AC/i);
+    expect(linkElement).toBeInTheDocument();
+  });
 })

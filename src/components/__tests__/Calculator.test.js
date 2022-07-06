@@ -20,4 +20,11 @@ describe('Tests for Calculator Module', () => {
     fireEvent.click(button0);
     expect(display.value).toBe('10');
   })
+
+  test('Test number of buttons', async () => {
+    render(<Calculator />);
+    const buttonList = await screen.findAllByRole('button');
+    expect(buttonList).toHaveLength(19);
+  });
+
 })

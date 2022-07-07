@@ -40,6 +40,7 @@ To get a local copy up and running follow these simple example steps.
 ### Deployment
 
 - Netlify: (https://dvc-math-magicians.netlify.app/)
+- Heroku: (https://dvc-math-magicians.herokuapp.com)
 
 ## Authors
 

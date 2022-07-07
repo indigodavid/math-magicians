@@ -8,6 +8,8 @@ describe('Tests for Calculator Module', () => {
   render(<Calculator />);
   test('The calculator component is displayed', () => {
     expect(screen.getByText(title)).toBeInTheDocument();
+    const { container } = render(<Calculator />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('Display updates when buttons are pressed', () => {

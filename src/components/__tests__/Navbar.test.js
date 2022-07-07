@@ -8,6 +8,7 @@ describe('Tests for Navbar', () => {
     const { container } = render(<App />);
     const logo = container.querySelector('.logo');
     expect(logo).toBeInTheDocument();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('Navbar links browsing', async () => {

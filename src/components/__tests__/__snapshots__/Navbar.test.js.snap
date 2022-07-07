@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Navbar Logo is displayed 1`] = `
+<nav
+  class="navbar"
+>
+  <div
+    class="logo"
+  >
+    <a
+      href="/"
+    >
+      Math Magicians
+    </a>
+  </div>
+  <ul
+    class="navLinks"
+  >
+    <li>
+      <a
+        aria-current="page"
+        class="active"
+        href="/"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        class=""
+        href="/calculator"
+      >
+        Calculator
+      </a>
+    </li>
+    <li>
+      <a
+        class=""
+        href="/quote"
+      >
+        Quote
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

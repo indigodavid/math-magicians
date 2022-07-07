@@ -12,3 +12,8 @@ test('Displays Please try another URL correctly', () => {
   const { container } = render(<NoMatch />);
   expect(screen.getByText('Please try other URL.')).toBeInTheDocument();
 });
+
+test('Displays Please try another URL correctly', () => {
+  const { container } = render(<NoMatch />);
+  expect(container.querySelector('svg')).toBeInTheDocument();
+});

@@ -10,7 +10,7 @@ class CalculatorButtons extends Component {
 
   render() {
     const innerList = buttonsArray.map((button) => (
-      <button type="button" key={button.id} className={button.class} onClick={() => this.handleClick(button.label)}>{button.label}</button>
+      <button type="button" id={button.id} key={button.id} className={button.class} onClick={() => this.handleClick(button.label)}>{button.label}</button>
     ));
     return (
       <div id="calculator-buttons">

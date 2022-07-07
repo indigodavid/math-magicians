@@ -33,11 +33,13 @@ To get a local copy up and running follow these simple example steps.
 ### Install
 
     npm install
-
 ### Usage
 
     npm run build
     npm start
+### Deployment
+
+- Netlify: (https://dvc-math-magicians.netlify.app/)
 
 ## Authors
 

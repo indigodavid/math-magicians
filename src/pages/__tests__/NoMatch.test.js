@@ -22,5 +22,5 @@ describe('Tests for NoMatch module', () => {
   test('Displays svg correctly', () => {
     const { container } = render(<NoMatch />);
     expect(container.querySelector('svg')).toBeInTheDocument();
+  });
 });
-})

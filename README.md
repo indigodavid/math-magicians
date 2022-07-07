@@ -41,6 +41,18 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
+👤 **Ben Omayio**
+
+- GitHub: [@kiboma2021](https://github.com/kiboma2021)
+- Twitter: [@BenOmayio](https://twitter.com/omayiobenj)
+- LinkedIn: [@BenOmayio](https://www.linkedin.com/in/ben-omayio-74622469/)
+
+👤 **Judá F Teixeira**
+
+- GitHub: [@mrjuda](https://github.com/mrjuda)
+- LinkedIn: [@judateixeira](https://www.linkedin.com/in/judateixeira)
+- Twitter: [@judalabs](https://twitter.com/judalabs)
+
 👤 **David Vera**
 
 - GitHub: [@indigodavid](https://github.com/indigodavid)
